@@ -28,7 +28,7 @@ cap = cv2.VideoCapture('demo2.avi')
 while(cap.isOpened()):
     ret,frame=cap.read()
 #for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port=True):
-    img=frame
+    img = frame
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     edges=cv2.Canny(gray, 75, 150)
     lines = cv2.HoughLinesP(edges, 1, np.pi/180, 50)
